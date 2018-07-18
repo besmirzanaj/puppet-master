@@ -11,6 +11,8 @@ If your server is limited in RAM then lower the memory dedicated for the puppet 
     $ sed -i 's/2g/512m/g' /etc/sysconfig/puppetserver    
     $ grep JAVA_ARGS /etc/sysconfig/puppetserver
     JAVA_ARGS="-Xms512m -Xmx512m -Djruby.logger.class=com.puppetlabs.jruby_utils.jruby.Slf4jLogger"
+    $ systemctl start puppetserver
+    $ systemctl enable puppetserver
 
 # restore configs
 After setting up the puppet master server clone this repo in the following folder
