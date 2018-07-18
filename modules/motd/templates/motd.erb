@@ -1,8 +1,11 @@
-This is a CloudAlbania managed Server
+This server is managed by CloudAlbania!
+
+If needed, apply the latest config manually
+by running:
+#puppet agent --test
 
     FQDN        : <%= @fqdn %>
     Environment : <% if @environment != ''%><%= @environment %><% else %>production<% end %>
-
 
     Platform    : <%= @productname %>
     CPU type    : <%= @processor0 %>
@@ -10,3 +13,4 @@ This is a CloudAlbania managed Server
     Memory      : <%= @memorysize_mb %> MB
     IP          : <%= @ipaddress %>
 
+end
