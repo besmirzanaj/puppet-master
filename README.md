@@ -16,5 +16,13 @@ If your server is limited in RAM then lower the memory dedicated for the puppet 
 After setting up the puppet master server clone this repo in the following folder
 
     yum -y install git
-    git clone https://github.com/besmirzanaj/puppet-master /etc/puppetlabs/code/environments/production
     cd /etc/puppetlabs/code/environments/production
+    git init
+    git remote add origin git@github.com:besmirzanaj/puppet-master.git
+    git branch --set-upstream-to=origin/master master
+    git checkout master
+    git pull
+
+And you have a working copy of the puppet master.
+
+Remember to adjust the dns records for your nodes to connect to the puppet master.
