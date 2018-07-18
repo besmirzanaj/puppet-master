@@ -1,22 +1,30 @@
 node default {
   class {motd:}
-  notify { 'enduser-before': }
-  notify { 'enduser-after': }
+  class { 'resolv_conf':
+    nameservers => ['1.1.1.1', '8.8.8.8.'],
+    searchpath  => [ 'cloudalbania.com'],
+  }
 
   class { 'ntp':
-    require => Notify['enduser-before'],
-    before  => Notify['enduser-after'],
   }
 }
 
 node 'vps1.cloudalbania.com' {
   class {motd:}
   class {ntp:}
+  class { 'resolv_conf':
+    nameservers => ['1.1.1.1', '8.8.8.8.'],
+    searchpath  => [ 'cloudalbania.com'],
+  }
 }
 
 node 'vps2.cloudalbania.com' {
   class {motd:}
   class {ntp:}
+  class { 'resolv_conf':
+    nameservers => ['1.1.1.1', '8.8.8.8.'],
+    searchpath  => [ 'cloudalbania.com'],
+  }
 }
 
 
