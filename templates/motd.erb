@@ -1,0 +1,21 @@
+This is a CloudAlbania Server
+
+    FQDN        : <%= @fqdn %>
+    Environment : <% if @environment != ''%><%= @environment %><% else %>production<% end %>
+
+#    Type        : <%= @stype %>
+#    Cluster     : <%= @cluster %>
+#    Datacenter  : <%= @datacenter %>
+#<% if @enclosure_name -%>
+#    Enclosure   : <%= @enclosure_name %>
+#<% end -%>
+#<% if @server_bay -%>
+#    Server Bay  : <%= @server_bay %>
+#<% end -%>
+
+    Platform    : <%= @productname %>
+    CPU type    : <%= @processor0 %>
+    CPU cores   : <%= @processorcount %>
+    Memory      : <%= @memorysize_mb %> MB
+    IP          : <%= @ipaddress %>
+

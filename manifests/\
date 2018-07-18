@@ -1,0 +1,33 @@
+node default {
+  class {motd:}
+  class {ntp:}
+}
+
+#  service { 'ntpd':
+#    ensure => 'running',
+#  }
+}
+
+node 'vps1.cloudalbania.com' {
+  class {motd:}
+  package { 'ntp':
+         ensure  => "installed",
+     }
+  service { 'ntp':
+     ensure => running,
+     enable => true
+  }
+}
+
+node 'vps2.cloudalbania.com' {
+  class {motd:}
+  package { 'ntp':
+    ensure  => "installed",
+    }
+  service { 'ntpd':
+    ensure => running,
+    enable => true
+  }
+}
+
+
