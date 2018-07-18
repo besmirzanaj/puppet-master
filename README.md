@@ -16,5 +16,5 @@ If your server is limited in RAM then lower the memory dedicated for the puppet 
 After setting up the puppet master server clone this repo in the following folder
 
     yum -y install git
+    git clone https://github.com/besmirzanaj/puppet-master /etc/puppetlabs/code/environments/production
     cd /etc/puppetlabs/code/environments/production
-    git clone https://github.com/besmirzanaj/puppet-master
