@@ -27,4 +27,4 @@ After setting up the puppet master server clone this repo in the following folde
 
 And you have a working copy of the puppet master.
 
-Remember to adjust the dns records for your nodes to connect to the puppet master.
+Remember to adjust the dns records for your nodes to connect to the puppet master. Tested.
