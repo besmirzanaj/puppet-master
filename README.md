@@ -1,10 +1,15 @@
-# puppet-master
+# Puppet Master
 Efforts to set up and managed a puppet master in a CentOS7 server.
 
 Install the puppet server
 
     rpm -Uvh https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm
     yum install puppetserver
+
+# Puppet Agents
+Install the puppet agent in your nodes
+    rpm -Uvh https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm
+    yum install puppet-agent
 
 If your server is limited in RAM then lower the memory dedicated for the puppet server like this in file
     
