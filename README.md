@@ -8,6 +8,7 @@ Install the puppet server
 
 # Puppet Agents
 Install the puppet agent in your nodes
+    
     rpm -Uvh https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm
     yum install puppet-agent
 
