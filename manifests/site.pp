@@ -1,13 +1,13 @@
 node default {
-  class {motd:}
+  class { motd: }
+  class { cloudalbania: }
   class { 'resolv_conf':
     config_file => '/etc/resolv.conf',
     nameservers => ['1.1.1.1', '8.8.8.8.'],
     searchpath  => [ 'cloudalbania.com'],
   }
 
-  class { 'ntp':
-  }
+  class { 'ntp': }
 }
 
 node 'vps1.cloudalbania.com' {
