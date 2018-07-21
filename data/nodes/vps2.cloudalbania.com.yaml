@@ -7,3 +7,6 @@ choria::server: true
 choria::manage_package_repo: true
 mcollective::service_ensure: stopped
 mcollective::service_enable: false
+
+# nto
+ntp::service_ensure: running
