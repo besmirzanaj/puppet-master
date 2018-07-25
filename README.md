@@ -1,5 +1,5 @@
 # Puppet Master
-Efforts to set up and managed a puppet master in a CentOS7 server.
+Efforts to set up and manage a puppet master in a CentOS7 server.
 
 Install the puppet server
 
