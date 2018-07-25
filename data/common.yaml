@@ -36,7 +36,7 @@ cloudalbania::packages::packages:
   - dstat
   - sysstat
   - htop
-  - bind-utils
+#  - bind-utils
 
 resolv_conf::searchpath: cloudalbania.com
 resolv_conf::nameservers:
