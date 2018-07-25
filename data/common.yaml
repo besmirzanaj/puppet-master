@@ -2,29 +2,43 @@
 profile::hiera_test::ssl: false
 iprofile::hiera_test::backups_enabled: true
 
-choria::manage_package_repo: true
+#choria::manage_package_repo: true
 
-mcollective_agent_nettest::gem_dependencies:
-  "net-ping": "2.0.2"
+#mcollective_agent_nettest::gem_dependencies:
+#  "net-ping": "2.0.2"
 
-mcollective_agent_process::gem_dependencies:
-  "sys-proctable": "1.2.0"
+#mcollective_agent_process::gem_dependencies:
+#  "sys-proctable": "1.2.0"
 
-mcollective::client: true
-mcollective::site_policies:
-  - action: "allow"
-    callers: "choria=vagrant.mcollective"
-    actions: "*"
-    facts: "*"
-    classes: "*"
+#mcollective::client: true
+#mcollective::site_policies:
+#  - action: "allow"
+#    callers: "choria=vagrant.mcollective"
+#    actions: "*"
+#    facts: "*"
+#    classes: "*"
 
-mcollective_choria::config:
-  use_srv_records: false
+#mcollective_choria::config:
+#  use_srv_records: false
 
-mcollective::plugin_classes:
-  - mcollective_data_sysctl
-  - mcollective_agent_shell
-  - mcollective_agent_process
-  - mcollective_agent_nettest
-  - mcollective_agent_bolt_tasks
+#mcollective::plugin_classes:
+#  - mcollective_data_sysctl
+#  - mcollective_agent_shell
+#  - mcollective_agent_process
+#  - mcollective_agent_nettest
+#  - mcollective_agent_bolt_tasks
 
+cloudalbania::packages::packages:
+  - telnet
+  - git
+  - nmap
+  - tcptraceroute
+  - dstat
+  - sysstat
+  - htop
+  - bind-utils
+
+resolv_conf::searchpath: cloudalbania.com
+resolv_conf::nameservers:
+  - '1.1.1.1'
+  - '8.8.8.8' 
