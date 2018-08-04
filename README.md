@@ -20,7 +20,7 @@ If your server is limited in RAM then lower the memory dedicated for the puppet 
     $ systemctl start puppetserver
     $ systemctl enable puppetserver
 
-# restore configs
+# Restore configs from this repo to your puppet dir
 After setting up the puppet master server clone this repo in the following folder
 
     yum -y install git
@@ -33,4 +33,26 @@ After setting up the puppet master server clone this repo in the following folde
 
 And you have a working copy of the puppet master.
 
-Remember to adjust the dns records for your nodes to connect to the puppet master. Tested.
+Remember to adjust the dns records for your nodes to connect to the puppet master. If you don't control a dns server then you can manually create host records for your puppet master in /etc/resolv.conf like this
+    
+    # cat /etc/resolv.conf
+    # [ip address of puppet master] puppet
+    # example
+    # 192.168.0.222     puppet
+    
+after making sure you can ping the host "puppet" make also sure that port 8140 of puppet master is reachable from your hosts (a simple "telnet puppet 8140" can verify this) then you are ready to start deploying puppet configuration management to your hosts.
+
+# First time joining a puppet master
+From your node run
+    
+    puppet agent --test
+    
+A new certificate request has been created and sent to the puppet master. In the puppet master then verify the request of that specific hostname by:
+
+    puppet cert list
+    
+and to apprive the request:
+
+    puppet cert sign "client hostname"
+    
+Now the configurations are ready to be deployed to the node. A new "puppet agent --test" command will do.
