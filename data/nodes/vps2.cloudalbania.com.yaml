@@ -22,4 +22,4 @@ profile::hiera_test::site_alias: ci.example.com
 #  - bind-utils
 
 #resolv_conf::searchpath: cloudalbania.com
-cloudalbania::updates::autoupdates: true
+cloudalbania::updates::autoupdates: false

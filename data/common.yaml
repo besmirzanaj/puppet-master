@@ -38,6 +38,8 @@ cloudalbania::packages::packages:
   - htop
 #  - bind-utils
 
+cloudalbania::updates::autoupdates: true
+
 resolv_conf::searchpath: cloudalbania.com
 resolv_conf::nameservers:
   - '1.1.1.1'

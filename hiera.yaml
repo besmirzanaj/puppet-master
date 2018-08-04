@@ -11,10 +11,10 @@ defaults:
 hierarchy:
   - name: nodes
     path: "nodes/%{::trusted.certname}.yaml"
-#
-#  - name: os
-#    path: "os/%{facts.os.name}.yaml"
-#
+
+  - name: os
+    path: "os/%{facts.os.name}.yaml"
+
 #  - name: server_type
 #    path: "server_type/%{facts.stype}.yaml"   
 #

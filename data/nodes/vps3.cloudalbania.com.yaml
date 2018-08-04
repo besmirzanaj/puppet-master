@@ -10,4 +10,4 @@
 
 # nto
 #ntp::service_ensure: running
-cloudalbania::updates::autoupdates: true
+cloudalbania::updates::autoupdates: false
