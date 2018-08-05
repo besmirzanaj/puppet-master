@@ -2,12 +2,6 @@ class cloudalbania::repos (
   $remi = false,
   ) {
 
-  if $facts['os']['name'] == 'CentOS' {
-    package { 'epel-release':
-      ensure => latest,
-    }
-  }
-
   if $remi == true {
   # the following case is not neccessary as the mirrorlist url is the same.
   # It serves as an example of applying some configs in two different OS releases
