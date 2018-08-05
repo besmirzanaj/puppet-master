@@ -42,7 +42,7 @@ Remember to adjust the dns records for your nodes to connect to the puppet maste
     
 after making sure you can ping the host "puppet" make also sure that port 8140 of puppet master is reachable from your hosts (a simple "telnet puppet 8140" can verify this) then you are ready to start deploying puppet configuration management to your hosts.
 
-# First time joining a puppet master
+# First time joining a node with a puppet master
 From your node run
     
     puppet agent --test
