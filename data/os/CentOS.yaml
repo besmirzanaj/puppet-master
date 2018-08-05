@@ -1,1 +1,2 @@
 ---
+profile::hiera_test::backups_enabled: false
