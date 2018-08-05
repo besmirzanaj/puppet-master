@@ -38,6 +38,8 @@ cloudalbania::packages::packages:
   - htop
   - wget
   - traceroute
+  - vim
+  - tmux
 #  - bind-utils
 
 cloudalbania::updates::autoupdates: true

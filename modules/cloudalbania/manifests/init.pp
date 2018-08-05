@@ -1,6 +1,6 @@
 class cloudalbania {
  
-#  include cloudalbania::install
+  include cloudalbania::files
   include cloudalbania::service
   include cloudalbania::packages
 
