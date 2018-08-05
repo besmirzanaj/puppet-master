@@ -1,6 +1,6 @@
 class cloudalbania::packages (
   $packages = [],
-  $package_ensure = present,
+  $package_ensure = latest,
 ) {
 
   package { $packages:

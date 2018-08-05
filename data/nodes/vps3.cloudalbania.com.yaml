@@ -11,3 +11,4 @@
 # nto
 #ntp::service_ensure: running
 cloudalbania::updates::autoupdates: false
+cloudalbania::repos::remi: true
