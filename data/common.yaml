@@ -36,6 +36,8 @@ cloudalbania::packages::packages:
   - dstat
   - sysstat
   - htop
+  - wget
+  - traceroute
 #  - bind-utils
 
 cloudalbania::updates::autoupdates: true
