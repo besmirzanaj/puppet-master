@@ -1,0 +1,19 @@
+# Single box with a puppet agent auto installing the puppet client
+# and being auto approved in puppet master.
+# vagrant file will be able to be autoprovisioned by "puppet.cloudalbania.com".
+# Before running this Vagrant file please be sure to run the following 
+# in the puppet master.
+
+#$ puppet cert clean "puppetagent1.cloudalbania.com"
+
+Vagrant.configure("2") do |config|
+  config.vm.box = 'centos/7'
+  config.vm.hostname = 'puppetagent1.cloudalbania.com'
+  config.vm.provision :shell, path: "bootstrap.sh"
+  config.vm.provision "puppet_server" do |puppet|
+    puppet.puppet_server = "puppet.cloudalbania.com"
+#   not needed
+#   puppet.puppet_node = "puppetagent1.cloudalbania.com"
+  end
+end
+
