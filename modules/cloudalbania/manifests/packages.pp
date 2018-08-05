@@ -4,7 +4,8 @@ class cloudalbania::packages (
 ) {
 
   package { $packages:
-    ensure => $package_ensure,
+    ensure  => $package_ensure,
+    require => Package[ 'epel-release' ],
   }
 
   if $facts['os']['name'] == 'CentOS' {

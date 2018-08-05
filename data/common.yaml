@@ -42,7 +42,7 @@ cloudalbania::packages::packages:
   - tmux
 #  - bind-utils
 
-cloudalbania::updates::autoupdates: true
+cloudalbania::updates::autoupdates: false
 
 resolv_conf::searchpath: cloudalbania.com
 resolv_conf::nameservers:
