@@ -3,5 +3,5 @@ node default {
   class { resolv_conf: }
   class { motd: }
   class { ntp: }
-
+  class { mariadbrepo: }
 }

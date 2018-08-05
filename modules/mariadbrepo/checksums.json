@@ -1,0 +1,11 @@
+{
+  "LICENSE": "94f71b03c0d57c7974d46179473b3d7e",
+  "Modulefile": "d285af7f71cc725c0621627835c2cbaa",
+  "README.md": "6c70100fdfe770fb15b7aa2c613bab7e",
+  "Rakefile": "43f5a12b4121688ff6b52a78891ea5a0",
+  "manifests/init.pp": "fcda6973c7ebed25b3fe28255e344ae5",
+  "metadata.json": "7370eb9b0f7bd6c01c89ce52d84fccfb",
+  "spec/classes/mariadbrepo_spec.rb": "e6371729849a46d18b3d70933a123041",
+  "spec/spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
+  "tests/init.pp": "aede754a45f05875421d7f491b0eee28"
+}
