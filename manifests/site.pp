@@ -3,5 +3,7 @@ node default {
   class { resolv_conf: }
   class { motd: }
   class { ntp: }
-  class { mariadbrepo: }
+  case $facts['os']['name'] {
+    'RedHat', 'CentOS':  { include mariadbrepo }
+  }
 }

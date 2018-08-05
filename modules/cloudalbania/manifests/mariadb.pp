@@ -1,20 +1,21 @@
 class cloudalbania::mariadb (
-  Boolean $mariadb
+  Boolean $mariadb_present = false
   ) {
-if #mariadb {
-  package {'MariaDB-server':
-    ensure => installed,
-    require => Yumrepo [ 'MariaDB' ]
+  if $mariadb_present {
+    package {'MariaDB-server':
+      ensure  => installed,
+      require => Class[mariadbrepo],
+    }
+    service { 'mysql':
+      ensure => running,
+      enable => true,
+      require => Package[ 'MariaDB-server' ],
+#      subscribe => File['/etc/my.cnf.d/server.cnf'],
+    }
+#    file { '/etc/my.cnf.d/server.cnf':
+#      ensure => file,
+#      mode   => '0644',
+#      source => 'puppet:///modules/cloudalbania/server.cnf',
+#    }
   }
-  service { 'mysql':
-    ensure => running,
-    enable => true,
-    subscribe => File['/etc/my.cnf.d/server.cnf'],
-  }
-  file { '/etc/my.cnf.d/server.cnf':
-    ensure => file,
-    mode   => 644,
-    source => 'puppet:///conf_files/cloudalbania/server.cnf',
-  }
-}
 }

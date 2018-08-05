@@ -12,3 +12,4 @@
 #ntp::service_ensure: running
 cloudalbania::updates::autoupdates: false
 cloudalbania::repos::remi: true
+mariadbrepo::version: 10.1

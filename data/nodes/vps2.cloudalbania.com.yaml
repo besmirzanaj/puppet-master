@@ -1,6 +1,6 @@
 ---
-profile::hiera_test::ssl: true
-profile::hiera_test::site_alias: ci.example.com
+#profile::hiera_test::ssl: true
+#profile::hiera_test::site_alias: ci.example.com
 
 # Choria
 #choria::server: true
@@ -8,19 +8,6 @@ profile::hiera_test::site_alias: ci.example.com
 #mcollective::service_ensure: stopped
 #mcollective::service_enable: false
 
-# nto
-#ntp::service_ensure: running
-
-#cloudalbania::packages::packages:
-#  - telnet
-#  - git
-#  - nmap
-#  - tcptraceroute
-#  - dstat
-#  - sysstat
-#  - htop
-#  - bind-utils
-
-#resolv_conf::searchpath: cloudalbania.com
 cloudalbania::updates::autoupdates: false
-mariadbrepo::version: 10.3
+mariadbrepo::version: 10.1
+cloudalbania::mariadb::mariadb_present: true
