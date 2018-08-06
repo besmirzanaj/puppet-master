@@ -56,3 +56,11 @@ and to apprive the request:
     puppet cert sign "client hostname"
     
 Now the configurations are ready to be deployed to the node. A new "puppet agent --test" command will do.
+
+## Vagrant file
+A vagrant file is provided as a test case scenario of joinig the puppet masters and auto applying the configuration.
+Notice that for this to work an [autosign](https://puppet.com/docs/puppet/5.3/ssl_autosign.html) rule must be in place for the puppet master certificate rules.
+
+    /etc/puppetlabs/puppet/autosign.conf
+    
+NB. This is not recommended in production, it is a [huge security risk](https://puppet.com/docs/puppet/5.3/ssl_autosign.html#security-implications-of-policy-based-autosigning)
