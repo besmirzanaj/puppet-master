@@ -3,13 +3,10 @@ class cloudalbania::packages (
   $package_ensure = latest,
 ) {
 
-  if $facts['os']['name'] == 'CentOS' {
-    package { $packages:
-      ensure  => $package_ensure,
-      require => Package[ 'epel-release' ],
-    }  
+  package { $packages:
+    ensure  => $package_ensure,
   }
-
+  
   if $facts['os']['name'] == 'CentOS' {
     package { 'epel-release':
       ensure => $package_ensure,
