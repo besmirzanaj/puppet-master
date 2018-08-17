@@ -1,4 +1,5 @@
 ---
+
 #profile::hiera_test::ssl: true
 #profile::hiera_test::site_alias: ci.example.com
 
@@ -8,8 +9,14 @@
 #mcollective::service_ensure: stopped
 #mcollective::service_enable: false
 
-# nto
-#ntp::service_ensure: running
+# ntp
+ntp::service_ensure: running
+
+# Cla specific config
 cloudalbania::updates::autoupdates: false
 cloudalbania::repos::remi: true
+
+# mariadb configs
 mariadbrepo::version: 10.1
+cloudalbania::mariadb::mariadb_present: true
+
