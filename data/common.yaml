@@ -1,6 +1,6 @@
 ---
-profile::hiera_test::ssl: false
-iprofile::hiera_test::backups_enabled: true
+#profile::hiera_test::ssl: false
+#profile::hiera_test::backups_enabled: true
 
 #choria::manage_package_repo: true
 
@@ -43,6 +43,8 @@ cloudalbania::packages::packages:
   - bind-utils
   - net-tools
   - nano
+  - whois
+
 cloudalbania::updates::autoupdates: false
 
 resolv_conf::searchpath: cloudalbania.com

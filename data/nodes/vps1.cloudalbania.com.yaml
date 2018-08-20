@@ -13,7 +13,6 @@ ntp::service_ensure: running
 cloudalbania::updates::autoupdates: false
 
 # apache
-apache: {}
 apache::vhosts:
   'benelux.ga':
     servername: 'benelux.ga'
