@@ -13,8 +13,11 @@ ntp::service_ensure: running
 cloudalbania::updates::autoupdates: false
 
 # apache
+apache: {}
 apache::vhosts:
-  benelux:
-    vhost_name: 'www.benelux.ga'
+  'benelux.ga':
+    servername: 'benelux.ga'
+    serveraliases: 
+      - 'www.benelux.ga'
     port: "80"
     docroot: '/var/www/html/benelux.ga'
