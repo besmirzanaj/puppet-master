@@ -40,8 +40,9 @@ cloudalbania::packages::packages:
   - traceroute
   - vim
   - tmux
-#  - bind-utils
-
+  - bind-utils
+  - net-tools
+  - nano
 cloudalbania::updates::autoupdates: false
 
 resolv_conf::searchpath: cloudalbania.com
