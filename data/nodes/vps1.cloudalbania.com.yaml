@@ -9,6 +9,12 @@
 #mcollective::service_enable: false
 
 # nto
-#ntp::service_ensure: running
+ntp::service_ensure: running
 cloudalbania::updates::autoupdates: false
 
+# apache
+apache::vhosts:
+  benelux:
+    vhost_name: 'www.benelux.ga'
+    port: "80"
+    docroot: '/var/www/html/benelux.ga'
