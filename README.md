@@ -6,12 +6,6 @@ Install the puppet server
     rpm -Uvh https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm
     yum install puppetserver
 
-# Puppet Agents
-Install the puppet agent in your nodes
-    
-    rpm -Uvh https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm
-    yum install puppet-agent
-
 If your server is limited in RAM then lower the memory dedicated for the puppet server like this in file
     
     $ sed -i 's/2g/512m/g' /etc/sysconfig/puppetserver    
@@ -41,6 +35,12 @@ Remember to adjust the dns records for your nodes to connect to the puppet maste
     # 192.168.0.222     puppet
     
 after making sure you can ping the host "puppet" make also sure that port 8140 of puppet master is reachable from your hosts (a simple "telnet puppet 8140" can verify this) then you are ready to start deploying puppet configuration management to your hosts.
+
+# Puppet Agents
+Install the puppet agent in your nodes
+    
+    rpm -Uvh https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm
+    yum install puppet-agent
 
 # First time joining a node with a puppet master
 From your node run
