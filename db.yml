@@ -1,1 +1,15 @@
-environments: {}
+environments:
+  production:
+    groups:
+      db: ''
+      puppetmaster: ''
+      web: ''
+    nodes:
+      vps1.cloudalbania.com: 
+        groups: 'web'
+        classes: 'ntp'
+      vps3.cloudalbania.com: ''
+      vps4.cloudalbania.com: ''
+    classes:
+      ntp: ''
+      motd: ''
