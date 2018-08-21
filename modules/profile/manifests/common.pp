@@ -1,4 +1,4 @@
-class profiles::common {
+class profile::common {
 #  include mcollective
 
   class { cloudalbania: }
