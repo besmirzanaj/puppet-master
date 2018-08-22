@@ -1,6 +1,8 @@
 class profile::web {
 
-  class { '::apache': }
+  include apache
+  include apache::vhosts
+
 
 }
 

@@ -13,10 +13,20 @@ ntp::service_ensure: running
 cloudalbania::updates::autoupdates: false
 
 # apache
+apache::default_vhost: false
 apache::vhosts:
   'benelux.ga':
-    vhost_name: 'benelux.ga'
+    servername: 'benelux.ga'
     serveraliases: 
       - 'www.benelux.ga'
-    port: "80"
+    port: 80
     docroot: '/var/www/html/benelux.ga'
+    options:
+      - Indexes
+      - FollowSymLinks
+      - MultiViews
+  'rrjeti.cf':
+    servername: 'rrjeti.cf'
+    serveralias: 'www.rrjeti.cf'
+    port: 80
+    docroot: '/var/www/html/rrjeti.cf'
