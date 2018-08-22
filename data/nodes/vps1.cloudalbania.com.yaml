@@ -15,7 +15,7 @@ cloudalbania::updates::autoupdates: false
 # apache
 apache::vhosts:
   'benelux.ga':
-    servername: 'benelux.ga'
+    vhost_name: 'benelux.ga'
     serveraliases: 
       - 'www.benelux.ga'
     port: "80"
