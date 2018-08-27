@@ -1,6 +1,6 @@
 class apache::vhosts (
 #  $vhosts = {},
-  $vhosts = hiera('apache::vhost', {}),
+  $vhosts = hiera('apache::vhosts', {}),
 ) {
   
   include ::apache
