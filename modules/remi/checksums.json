@@ -1,0 +1,20 @@
+{
+  "CHANGELOG.md": "8c014ca42c6e30013814963010d3f3e4",
+  "Gemfile": "d96e0e651f804b2cddb776fad16146de",
+  "README.md": "85daf0f49527c18e4f6c14211ed607c2",
+  "Rakefile": "dea9b7fb13224f44edcbbe636db85050",
+  "examples/init.pp": "a5f32b3c020e590eaece2aabdeaab083",
+  "files/RPM-GPG-KEY-remi": "3abb4e5a7b1408c888e19f718c012630",
+  "manifests/init.pp": "af8c6c8c9c1bc1eb142ab47b2c507bf4",
+  "manifests/rpm_gpg_key.pp": "8b8c6bd57104481ea27ad6c0f88d6100",
+  "metadata.json": "87717bb6a41d33ae4037a6c6ad38dbe7",
+  "spec/acceptance/class_spec.rb": "fda3997e98cb666f3b7ee6ad7d5cbe26",
+  "spec/acceptance/nodesets/centos6.yml": "644d7eda28c6c15c198ea1b81f7fd755",
+  "spec/acceptance/nodesets/centos7.yml": "832f799b9b47e577bf21f51ccf456348",
+  "spec/acceptance/nodesets/fedora27.yml": "770ec556313839e429a40575724bfb80",
+  "spec/classes/init_spec.rb": "8d060ff02102532cf0bfdd4c10a18c2e",
+  "spec/classes/rpm_gpg_key_spec.rb": "cb0e4941bb1a241e6c4b15803e5fa1ad",
+  "spec/default_facts.yml": "4de3cb611af6981a6d22bc77d7dd6f6f",
+  "spec/spec_helper.rb": "4a36f24b9891142e2e09fdbd4a9263c7",
+  "spec/spec_helper_acceptance.rb": "6e65e967f7389c7445675c3150133c6a"
+}

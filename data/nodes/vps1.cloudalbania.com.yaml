@@ -32,3 +32,5 @@ apache::vhosts:
       - FollowSymLinks
       - MultiViews
 
+# Remi
+remi::remi_php72_enabled: 1

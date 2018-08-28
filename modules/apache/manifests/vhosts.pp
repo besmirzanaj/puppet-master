@@ -1,5 +1,5 @@
 class apache::vhosts (
-#  $vhosts = {},
+  #$vhosts = {},
   $vhosts = hiera('apache::vhosts', {}),
 ) {
   
