@@ -16,9 +16,7 @@ cloudalbania::updates::autoupdates: false
 apache::default_vhost: false
 apache::vhosts:
   'benelux.ga':
-    servername: 'benelux.ga'
-    serveraliases: 
-      - 'www.benelux.ga'
+    vhost_name: 'benelux.ga'
     port: 80
     docroot: '/var/www/html/benelux.ga'
     options:
@@ -26,7 +24,11 @@ apache::vhosts:
       - FollowSymLinks
       - MultiViews
   'rrjeti.cf':
-    servername: 'rrjeti.cf'
-    serveralias: 'www.rrjeti.cf'
+    vhost_name: 'rrjeti.cf'
     port: 80
     docroot: '/var/www/html/rrjeti.cf'
+    options:
+      - Indexes
+      - FollowSymLinks
+      - MultiViews
+
