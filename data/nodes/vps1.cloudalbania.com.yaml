@@ -23,14 +23,22 @@ apache::vhosts:
       - Indexes
       - FollowSymLinks
       - MultiViews
-  'rrjeti.cf':
-    vhost_name: 'rrjeti.cf'
+  'besmir.ml':
+    vhost_name: 'besmir.ml'
     port: 80
-    docroot: '/var/www/html/rrjeti.cf'
-    options:
-      - Indexes
-      - FollowSymLinks
-      - MultiViews
+    docroot: '/var/www/html/besmir.ml'
+  'bzconsulting.ml':
+    vhost_name: 'bzconsulting.ml'
+    port: 80
+    docroot: '/var/www/html/bzconsulting.ml'
+  'dinoco.ml':
+    vhost_name: 'dinoco.ml'
+    port: 80
+    docroot: '/var/www/html/dinoco.ml'
+  'bena.ml':
+    vhost_name: 'bena.ml'
+    port: 80
+    docroot: '/var/www/html/bena.ml'
 
 # Remi
 remi::remi_php72_enabled: 1
