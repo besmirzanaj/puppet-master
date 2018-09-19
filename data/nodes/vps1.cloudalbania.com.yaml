@@ -12,33 +12,87 @@
 ntp::service_ensure: running
 cloudalbania::updates::autoupdates: false
 
+##############################33
+#can be restored
+
 # apache
-apache::default_vhost: false
-apache::vhosts:
-  'benelux.ga':
-    vhost_name: 'benelux.ga'
-    port: 80
-    docroot: '/var/www/html/benelux.ga'
-    options:
-      - Indexes
-      - FollowSymLinks
-      - MultiViews
-  'besmir.ml':
-    vhost_name: 'besmir.ml'
-    port: 80
-    docroot: '/var/www/html/besmir.ml'
-  'bzconsulting.ml':
-    vhost_name: 'bzconsulting.ml'
-    port: 80
-    docroot: '/var/www/html/bzconsulting.ml'
-  'dinoco.ml':
-    vhost_name: 'dinoco.ml'
-    port: 80
-    docroot: '/var/www/html/dinoco.ml'
-  'bena.ml':
-    vhost_name: 'bena.ml'
-    port: 80
-    docroot: '/var/www/html/bena.ml'
+#apache::default_vhost: false
+#apache::vhosts:
+#  'benelux.ga':
+#    vhost_name: 'benelux.ga'
+#    port: 80
+#    docroot: '/var/www/html/benelux.ga'
+#    options:
+#      - Indexes
+#      - FollowSymLinks
+#      - MultiViews
+#  'besmir.ml':
+#    vhost_name: 'besmir.ml'
+#    port: 80
+#    docroot: '/var/www/html/besmir.ml'
+#  'bzconsulting.ml':
+#    vhost_name: 'bzconsulting.ml'
+#    port: 80
+#    docroot: '/var/www/html/bzconsulting.ml'
+#  'dinoco.ml':
+#    vhost_name: 'dinoco.ml'
+#    port: 80
+#    docroot: '/var/www/html/dinoco.ml'
+#  'bena.ml':
+#    vhost_name: 'bena.ml'
+#    port: 80
+#    docroot: '/var/www/html/bena.ml'
 
 # Remi
 remi::remi_php72_enabled: 1
+
+#letsencrypt::config::email: 'besmirzanaj@gmail.com'
+#letsencrypt::config::server: 'https://acme-staging.api.letsencrypt.org/directory'
+#letsencrypt::package_ensure: 'present'
+#letsencrypt::configure_epel: false
+#letsencrypt::certonly: 
+#  'vps':
+#    domains: 
+#      - besmir.ml
+#      - dinoco.ml
+#    plugin: apache
+#    webroot_paths: 
+#      - '/var/www/html/besmir.ml'
+#      - '/var/www/html/dinoco.ml'
+#
+##########################################
+#
+#testing new letsencrypt
+
+apache_nonssl_vhosts:
+  apache::vhost:
+    besmir.ml_nonssl:
+      vhost_name: besmir.ml
+      port: 80
+      docroot: /var/www/html
+      redirectmatch_status: 301
+      redirectmatch_regexp: ^(?!/\.well-known/acme-challenge/).*
+      redirectmatch_dest: https://besmir.ml$0
+apache_ssl_vhosts:
+  apache::vhost:
+    besmir.ml:
+      port: 443
+      vhost_name: besmir.ml
+      docroot: /var/www/besmir.ml
+      ssl: true
+      ssl_chain: /etc/letsencrypt/live/besmir.ml/chain.pem
+      ssl_key: /etc/letsencrypt/live/besmir.ml/privkey.pem
+      ssl_cert: /etc/letsencrypt/live/besmir.ml/cert.pem
+      #proxy_pass:
+      #  -
+      #    path: '/'
+      #    url: 'http://10.1.0.15:8080/'
+letsencrypt::email: besmir.zanaj@cloudalbania.com
+letsencrypt::configure_epel: false
+letsencrypt::manager_cron: true
+letsencryptcerts:
+  letsencrypt::certonly:
+    'besmir.ml':
+      plugin: 'webroot'
+      webroot_paths:
+        - /var/www/html
