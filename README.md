@@ -1,5 +1,5 @@
 # Puppet Master
-Efforts to set up and manage a puppet master in a CentOS7 server.
+Efforts to set up and manage a production level puppet master in a CentOS 7 server.
 
 Install the puppet server
 
@@ -27,9 +27,9 @@ After setting up the puppet master server clone this repo in the following folde
 
 And you have a working copy of the puppet master.
 
-Remember to adjust the dns records for your nodes to connect to the puppet master. If you don't control a dns server then you can manually create host records for your puppet master in /etc/resolv.conf like this
+Remember to adjust the dns records for your nodes to connect to the puppet master. If you don't control a dns server then you can manually create host records for your puppet master in /etc/hosts like this
     
-    # cat /etc/resolv.conf
+    # cat /etc/hosts
     # [ip address of puppet master] puppet
     # example
     # 192.168.0.222     puppet
