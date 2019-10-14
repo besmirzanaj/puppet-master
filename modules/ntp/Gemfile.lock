@@ -295,7 +295,7 @@ GEM
       master_manipulator (>= 2.1.1, < 3.0.0)
     puppet-strings (2.1.0)
       rgen
-      yard (~> 0.9.5)
+      yard (~> 0.9.20)
     puppet-syntax (2.4.1)
       rake
     puppet_pot_generator (1.0.1)
@@ -412,7 +412,7 @@ GEM
     unf_ext (0.0.7.5)
     unicode-display_width (1.4.0)
     url (0.3.2)
-    yard (0.9.14)
+    yard (0.9.20)
 
 PLATFORMS
   ruby
