@@ -245,7 +245,7 @@ GEM
     inifile (3.0.0)
     ipaddress (0.8.3)
     jgrep (1.5.4)
-    jmespath (1.4.0)
+    jmespath (1.6.1)
     json (2.6.1)
     json-schema (2.8.1)
       addressable (>= 2.4)
